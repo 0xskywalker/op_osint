@@ -22,3 +22,11 @@ $ sudo python3 -m pip install -r requirements.txt
 $ sudo python3 -m textblob.download_corpora
 
 ```
+
+## Run
+Add Twitter API keys to secrets.py
+
+```
+$ python3 analyse.py --help
+```
+
