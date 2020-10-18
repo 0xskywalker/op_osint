@@ -3,6 +3,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Run](#run)
 
 ## General info
 Sentiment Analysis program designed to monitor public opinion based on a given trend. 
