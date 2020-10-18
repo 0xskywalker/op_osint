@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-n', help='number of tweets', type=int, default=100)
+parser.add_argument('-n', help='number of tweets', type=int, default=10000)
 group = parser.add_mutually_exclusive_group()
 group.add_argument('-id', help='twitter id', type=str)
 group.add_argument('-s', help='search trend', type=str)
