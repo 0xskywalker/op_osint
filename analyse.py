@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-n', help='number of tweets', type=int, default=10000)
+parser.add_argument('-g', help='geolocation: lat, log, rad', type=str)
 group = parser.add_mutually_exclusive_group()
 group.add_argument('-id', help='twitter id', type=str)
 group.add_argument('-s', help='search trend', type=str)
@@ -24,7 +25,7 @@ args = parser.parse_args()
 id = args.id
 num = args.n
 search = args.s
-
+geo = args.g
 
 class API():
 	def __init__(self, apikey, apisec, tokn, toknsec):
@@ -45,7 +46,7 @@ class API():
 	def scrape(self):
 		self.Login()
 		#user_tweets = self.api.user_timeline(screen_name=id, count=num)
-		fetched_tweets = self.api.search(q=search, count=num)
+		fetched_tweets = self.api.search(q=search, count=num, geocode=geo)
 		print("Tweets Fetched")
 		positive = 0
 		negative = 0
